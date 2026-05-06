@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InAmigos Foundation | Official Awareness Page</title>
+    <style>
+        :root {
+            --black: #000000;
+            --dark-grey: #1a1a1a;
+            --medium-grey: #666666;
+            --light-grey: #f5f5f5;
+            --white: #ffffff;
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        .hero { 
+    height: 80vh; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    padding: 0 8%; 
+    /* ADD THE LINK HERE inside the url('...') */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('https://media.istockphoto.com/id/483294349/photo/cheerful-indian-children-playing-in-maharashtra.jpg?s=612x612&w=0&k=20&c=8IFXQxAKxK-3GXLpjwn9F02jmFEqSOnG2EAM3FWyemQ=') no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: var(--white); 
+    position: relative; 
+}
+
+        body { font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif; margin: 0; background: var(--white); color: var(--black); line-height: 1.6; overflow-x: hidden; }
+        
+  
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 25px 8%; background: var(--white); border-bottom: 1px solid var(--light-grey); position: sticky; top: 0; z-index: 1000; }
+        .logo { font-weight: 900; font-size: 1.5rem; letter-spacing: 2px; text-transform: uppercase; }
+        .nav-tagline { font-size: 0.75rem; font-weight: 700; color: var(--medium-grey); text-transform: uppercase; letter-spacing: 1px; }
+
+        .hero { height: 70vh; display: flex; flex-direction: column; justify-content: center; padding: 0 8%; background: var(--black); color: var(--white); position: relative; }
+        .hero h1 { font-size: 5rem; margin: 0; text-transform: uppercase; line-height: 0.9; font-weight: 900; }
+        .hero p { font-size: 1.25rem; margin-top: 25px; color: var(--medium-grey); max-width: 600px; }
+
+        
+        .intro-section { padding: 80px 8%; background: var(--white); }
+        .intro-content { max-width: 900px; }
+        .intro-preview { font-size: 1.1rem; color: var(--dark-grey); margin-bottom: 20px; }
+        
+        #more-text { display: none; margin-top: 20px; border-top: 1px solid var(--light-grey); padding-top: 20px; }
+        .read-more-btn { background: none; border: 1px solid var(--black); padding: 10px 25px; cursor: pointer; font-weight: 700; text-transform: uppercase; font-size: 0.8rem; transition: var(--transition); }
+        .read-more-btn:hover { background: var(--black); color: var(--white); }
+
+        .credential-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 30px; }
+        .cred-item { font-size: 0.85rem; font-weight: 600; border: 1px solid var(--light-grey); padding: 10px; border-radius: 4px; }
+
+      
+        .impact-strip { display: flex; justify-content: space-around; background: var(--black); color: var(--white); padding: 60px 8%; }
+        .stat-item { text-align: center; }
+        .stat-item h2 { font-size: 3rem; margin: 0; font-weight: 900; }
+        .stat-item p { text-transform: uppercase; font-size: 0.7rem; letter-spacing: 2px; color: var(--medium-grey); margin: 0; }
+
+      
+        .container { padding: 100px 8%; }
+        .section-header { margin-bottom: 60px; text-align: center; }
+        .section-header h2 { font-size: 3rem; text-transform: uppercase; margin: 0; font-weight: 900; }
+
+        .project-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .project-card { background: var(--white); border: 1px solid var(--light-grey); transition: var(--transition); position: relative; }
+        .project-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); border-color: var(--black); }
+        
+        .image-box { height: 280px; background: var(--light-grey); overflow: hidden; }
+        
+        .image-box img { width: 100%; height: 100%; object-fit: cover;  transition: var(--transition); }
+        .project-card:hover img {  scale: 1.05; }
+
+        .project-content { padding: 30px; }
+        .project-content h3 { font-size: 1.3rem; margin: 0 0 15px 0; text-transform: uppercase; }
+        .project-content p { color: var(--medium-grey); font-size: 0.9rem; margin: 0; }
+
+        
+        .social-section { background: var(--black); color: var(--white); padding: 80px 8%; text-align: center; }
+        .social-links { display: flex; justify-content: center; gap: 40px; margin-top: 40px; flex-wrap: wrap; }
+        .social-link { color: var(--white); text-decoration: none; font-weight: 700; font-size: 1rem; letter-spacing: 2px; padding-bottom: 5px; border-bottom: 2px solid transparent; transition: var(--transition); }
+        .social-link:hover { border-bottom-color: var(--white); }
+
+       
+        .cta-box { padding: 120px 8%; text-align: center; }
+        .cta-btn { background: var(--black); color: var(--white); padding: 22px 60px; text-decoration: none; font-weight: 800; text-transform: uppercase; font-size: 1.1rem; display: inline-block; transition: var(--transition); }
+        .cta-btn:hover { background: var(--medium-grey); transform: scale(1.05); }
+
+        footer { background: var(--light-grey); padding: 50px 8%; text-align: center; font-size: 0.75rem; color: var(--medium-grey); letter-spacing: 1px; }
+
+        @media (max-width: 1100px) { .project-grid { grid-template-columns: repeat(2, 1fr); } .hero h1 { font-size: 3.5rem; } }
+        @media (max-width: 768px) { .project-grid { grid-template-columns: 1fr; } .impact-strip { flex-direction: column; gap: 30px; } }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="logo"><div class="image-box1"><img src="https://yt3.googleusercontent.com/ytc/AIdro_nlJw943y19HLsNDBqmRlFUXHxu03zgPbrE8B4UwZBYAGU=s900-c-k-c0x00ffffff-no-rj" alt="InAmigos Logo" style="height: 50px;width: 50px;"></div> InAmigos</div>
+    <div class="nav-tagline">Est. Sept 2020 | Bilaspur</div>
+</nav>
+
+<section class="hero">
+    <h1>Uniting Minds<br>For Change.</h1>
+    <p>A registered non-profit organization committed to creating lasting social impact across India.</p>
+</section>
+
+<section class="intro-section">
+    <div class="intro-content">
+        <div class="intro-preview">
+            <strong>About Us:</strong> InAmigos Foundation, founded on September 23, 2020, by Mr. Govind Shukla (Founder & CEO), addresses critical societal issues through a dedicated network of professionals and volunteers across India.
+        </div>
+        
+        <button class="read-more-btn" onclick="toggleAbout()" id="toggleBtn">Read More</button>
+
+        <div id="more-text">
+            <p>It has its base at Chhattisgarh. It holds 80G & 12A certifications, ensuring transparency, accountability and tax-exempt benefits for donors. Our foundation is also CSR-1 registered, allowing us to collaborate with corporate partners for impactful Corporate Social Responsibility (CSR) initiatives. Additionally, we are NITI Aayog registered, aligning our work with national development goals and hold the prestigious IAF ISO 9001:2015 certification, signifying our commitment to maintaining high-quality standards in operations and service delivery. Our Key Initiatives 1. Project Seva : Providing food and clothing to the underprivileged. 2. Project Bachpanshala : Ensuring quality education for underprivileged children. 3. Project Jeev : Animal welfare, including rescue, protection and feeding. 4. Project Udaan : Women empowerment through skill development and financial independence. 5. Project Prakriti  Environmental conservation and sustainability efforts. 6. Project Vikas : Enhancing employability through skill development programs. With a strong network of dedicated professionals, volunteers and corporate partners, we work tirelessly to bring positive change in society. Our social media platforms actively showcase our impact, keeping our supporters informed and engaged. At InAmigos Foundation, we believe in the power of collective action. Every contribution is directed towards essential causes such as food distribution, education, women empowerment, animal welfare, environmental sustainability and social inclusion programs across India. Join Us in Making a Difference Together, we can create a more inclusive, compassionate and empowered society.</p>
+            
+            <h4 style="text-transform: uppercase; margin-top: 30px;">Credentials & Recognitions</h4>
+            <div class="credential-grid">
+                <div class="cred-item">✔ Section 8 Registered</div>
+                <div class="cred-item">✔ 80G & 12A Certified</div>
+                <div class="cred-item">✔ CSR-1 Registered</div>
+                <div class="cred-item">✔ NITI Aayog (NGO Darpan)</div>
+                <div class="cred-item">✔ IAF ISO 9001:2015</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="impact-strip">
+    <div class="stat-item"><h2>50,000+</h2><p>Meals (Seva)</p></div>
+    <div class="stat-item"><h2>20,000+</h2><p>Saplings (Prakriti)</p></div>
+    <div class="stat-item"><h2>30,000+</h2><p>Interns Trained</p></div>
+    <div class="stat-item"><h2>250+</h2><p>Permanent Members</p></div>
+</section>
+
+<div class="container">
+    <div class="section-header">
+        <h2>Key Initiatives</h2>
+    </div>
+
+    <div class="project-grid">
+        <div class="project-card">
+            <div class="image-box"><img src="https://tse3.mm.bing.net/th/id/OIP.BJia0OnbW5H9xdLUJHruxgHaFj?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Seva"></div>
+            <div class="project-content">
+                <h3>01. Project Seva</h3>
+                <p>Over 50,000+ meals and clothing distributed to the underprivileged.Hunger has no face, no age, no boundaries. InAmigos Foundation is reaching out with food and care to ensure no one sleeps hungry. A simple meal can restore strength, dignity, and hope. Together, let us fight hunger and serve humanity with compassion</p>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="image-box"><img src="https://st.depositphotos.com/16337376/56579/i/1600/depositphotos_565791206-stock-photo-group-of-happy-smiling-village.jpg" alt="Bachpanshala"></div>
+            <div class="project-content">
+                <h3>02. BachpanShala</h3>
+                <p>For many children, education is not given , it is a dream waiting for a chance.Through Project Bachpanshala, InAmigos Foundation is reaching children who have limited access to learning and giving them more than just education. Creating a space where they can grow, gain confidence, and start believing in their own potential.</p>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="image-box"><img src="https://tse3.mm.bing.net/th/id/OIP.r_LoIZIND337-IOPKSaixgHaEK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Jeev"></div>
+            <div class="project-content">
+                <h3>03. Project Jeev</h3>
+                <p>Feeding 50+ stray animals daily through our vast volunteer network.An initiative by the InAmigos Foundation, compassion is being transformed into real action. What started as a small feeding effort has grown into a powerful movement dedicated to feeding, rescuing, and rehabilitating stray animals while promoting peaceful coexistence within communities.</p>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="image-box"><img src="https://static.india.com/wp-content/uploads/2022/12/Collage-Maker-31-Dec-2022-03.58-PM-1.jpg" alt="Udaan"></div>
+            <div class="project-content">
+                <h3>04. Project Udaan</h3>
+                <p>Empowering women through self-help groups and skill development initiatives.Empowerment is not a concept, it is a moment where skill turns into income and effort becomes independence.An initiative by InAmigos Foundation (IAF), these moments become reality through sustainable livelihoods and supporting women-led enterprises at the grassroots.Because when women rise, communities transform.</p>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="image-box"><img src="https://img.freepik.com/premium-photo/green-young-plants-field-sunrise-agriculture-concept-generated-ai_646632-1548.jpg?w=2000" alt="Prakriti"></div>
+            <div class="project-content">
+                <h3>05. Project Prakriti</h3>
+                <p>Planting 20,000+ saplings to advocate for sustainability and conservation. An initiative by the InAmigos Foundation, this project is a green movement focused on afforestation, sustainable living, and environmental education. Since 2021, it has empowered communities across India to plant over 20,000 saplings and revive barren lands. Through eco-clubs, workshops, and digital platforms, it is nurturing a greener future.</p>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="image-box"><img src="https://tse1.mm.bing.net/th/id/OIP.d4tPRDsPgzIyvAGoFjRfCAHaFT?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Vikas"></div>
+            <div class="project-content">
+                <h3>06. Project Vikas</h3>
+                <p>Facilitating employment for 30,000+ interns across digital and social fields. An initiative by the InAmigos Foundation, this project is dedicated to creating meaningful opportunities for young professionals and fostering social impact through skill development and experiential learning.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="social-section">
+    <h2>Connect With The Mission</h2>
+    <div class="social-links">
+        <a href="https://www.instagram.com/inamigos/" class="social-link">INSTAGRAM</a>
+        <a href="https://www.facebook.com/InAmigos/" class="social-link">FACEBOOK</a>
+        <a href="https://www.linkedin.com/in/inamigos-foundation-1289781b1" class="social-link">LINKEDIN</a>
+        <a href="https://x.com/inamigosf" class="social-link">TWITTER</a>
+    </div>
+</section>
+
+<section class="cta-box">
+    <h2>Join Us In Making A Difference</h2>
+    <p>Every contribution strengthens our cause and enables us to expand our reach.</p>
+    <a href="https://inamigosfoundation.org.in/" class="cta-btn">Join Us</a>
+</section>
+
+<footer>
+    <p>© 2026 InAmigos Foundation | 80G & 12A Certified | ISO 9001:2015 | CSR-1 Registered</p>
+</footer>
+
+<script>
+    function toggleAbout() {
+        var moreText = document.getElementById("more-text");
+        var btnText = document.getElementById("toggleBtn");
+
+        if (moreText.style.display === "block") {
+            moreText.style.display = "none";
+            btnText.innerHTML = "Read More";
+        } else {
+            moreText.style.display = "block";
+            btnText.innerHTML = "Read Less";
+        }
+    }
+</script>
+
+</body>
+</html>
